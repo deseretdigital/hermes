@@ -13,7 +13,8 @@ class BotTest extends PHPUnit_Framework_TestCase
     {
         include __DIR__ . '/files/credentials.php';
         $bot = new Hermes_Bot($apiKey, $subdomain, new Zend_Http_Client());
-        $ping = new Hermes_Listener_Ping($bot);
+        $ping = new Hermes_Listener_Ping($bot, $pingIniFile, 'testing');
+        $ping = new Hermes_Listener_Deploy($bot);
         $bot->listenRoom($room);
     }
     public function testLeave()

@@ -1,0 +1,5 @@
+[production]
+listener.ping.prefix =
+
+[testing : production]
+listener.ping.prefix = 'TEST MODE - '

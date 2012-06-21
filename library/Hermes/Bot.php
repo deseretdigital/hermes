@@ -6,19 +6,20 @@ class Hermes_Bot
     public $apiKey = null;
     public $subdomain = null;
     public $events = array();
-
+    public $applicationLevel = '';
     /**
      *
      * @var Zend_Http_Client
      */
     public $client = null;
 
-    public function __construct($apiKey, $subdomain, Zend_Http_Client $client)
+    public function __construct($apiKey, $subdomain, Zend_Http_Client $client, $applicationLevel = 'production')
     {
         $this->apiKey = $apiKey;
         $this->client = $client;
         $this->subdomain = $subdomain;
         $this->client->setAuth($this->apiKey,'X');
+        $this->applicationLevel = $applicationLevel;
     }
 
     public function joinRoom($room)
@@ -118,5 +119,10 @@ class Hermes_Bot
                 }
             }
         }
+    }
+
+    public function getApplicationLevel()
+    {
+        return $this->applicationLevel;
     }
 }
