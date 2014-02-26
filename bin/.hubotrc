@@ -3,7 +3,7 @@
 
 export HUBOT_HIPCHAT_JID="25193_663019@chat.hipchat.com"
 export HUBOT_HIPCHAT_PASSWORD="m3ss3ng3r0fT3h&0dz"
-export HUBOT_HIPCHAT_ROOMS="25193_ddm_tech_team_(no_lifeguards_on_duty)@conf.hipchat.com"
+export HUBOT_HIPCHAT_ROOMS="All"
 export HUBOT_GITHUB_ORG="deseretdigital"
 export HUBOT_GITHUB_TOKEN="db3c4de83592c4fa2b469b2f34790dc5833e193e"
 
@@ -13,6 +13,7 @@ export HUBOT_AUTH_ADMIN="660786"
 
 export HUBOT_ADAPTER="hipchat"
 export HUBOT_PATH="/vagrant/hermes"
+export HUBOT_PORT="8080"
 
 #---------------- END HUBOT CONFIG --------------------------------
 
